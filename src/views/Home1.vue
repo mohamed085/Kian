@@ -274,8 +274,6 @@
       </div>
     </div>
 
-    <div class="space"></div>
-    <div class="space"></div>
   </div>
 </template>
 
@@ -613,7 +611,7 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
 
   &__owl {
     position: relative;
-    bottom: 15%;
+    bottom: 20%;
     right: 0;
     width: 100%;
     display: flex;
