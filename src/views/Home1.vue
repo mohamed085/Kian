@@ -30,11 +30,11 @@
         <i v-if="mobileNav" @click="closeMobileNav()" class="fas fa-times"></i>
       </div>
       <div class="mobile-nav__items">
-        <a to="#slider" exact class="mobile-nav__items__item"><span>الرئيسية</span></a>
-        <a to="#register" class="mobile-nav__items__item"><span>التسجيل</span></a>
-        <a to="#about" class="mobile-nav__items__item"><span>معلومات عنا</span></a>
-        <a to="#services" class="mobile-nav__items__item"><span>الخدمات</span></a>
-        <a to="#contact" class="mobile-nav__items__item"><span>تواصل بنا</span></a>
+        <a href="#slider" exact class="mobile-nav__items__item"><span>الرئيسية</span></a>
+        <a href="#register" class="mobile-nav__items__item"><span>التسجيل</span></a>
+        <a href="#about" class="mobile-nav__items__item"><span>معلومات عنا</span></a>
+        <a href="#services" class="mobile-nav__items__item"><span>الخدمات</span></a>
+        <a href="#contact" class="mobile-nav__items__item"><span>تواصل بنا</span></a>
       </div>
     </div>
 
@@ -119,7 +119,7 @@
             النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 ">
           <div class="register__container">
             <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
             <div class="break mb-4"></div>
@@ -159,14 +159,14 @@
           <div class="title-5 me-3 mb-2">يمكنك التحدث الينا مباشره من خلال</div>
           <div class="break me-3"></div>
           <div class="about__section__content__contact me-3">
-            <div class="about__section__content__contact__btn">
+            <a href="https://wa.me/+201012703497" class="about__section__content__contact__btn">
               <span>واتساب</span>
               <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="about__section__content__contact__btn">
+            </a>
+            <a href="tel:+201012703497"  class="about__section__content__contact__btn">
               <span>إتصال مباشر</span>
               <i class="fas fa-phone-alt"></i>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -814,6 +814,9 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
           box-shadow: 0 1rem 2rem rgba($color-primary, .4);
           display: flex;
           align-items: center;
+          justify-content: center;
+          width: 40%;
+          font-size: 1rem;
 
           & i {
             margin-right: .8rem;
