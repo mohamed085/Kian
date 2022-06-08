@@ -1,0 +1,37 @@
+.form-group {
+  padding: 10px 1%;
+
+  & span {
+    color: $color-white;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  & input,
+  & .input {
+    padding: .8rem 1rem;
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px #0000000d;
+    height: auto;
+    background: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-white;
+    border: none;
+    border-bottom: 2px solid $color-primary;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      border-bottom: 4px solid $color-primary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-white;
+    }
+  }
+}
