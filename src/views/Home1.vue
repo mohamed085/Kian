@@ -13,11 +13,11 @@
 
       <div class="header__content">
         <div class="header__content__items">
-          <router-link to="/" class="header__content__items__item"><span>الرئيسية</span></router-link>
-          <router-link to="#register" class="header__content__items__item"><span>التسجيل</span></router-link>
-          <router-link to="#" class="header__content__items__item"><span>معلومات عنا</span></router-link>
-          <router-link to="#" class="header__content__items__item"><span>الخدمات</span></router-link>
-          <router-link to="#" class="header__content__items__item"><span>تواصل بنا</span></router-link>
+          <a href="#slider" class="header__content__items__item"><span>الرئيسية</span></a>
+          <a href="#register" class="header__content__items__item"><span>التسجيل</span></a>
+          <a href="#about" class="header__content__items__item"><span>معلومات عنا</span></a>
+          <a href="#services" class="header__content__items__item"><span>الخدمات</span></a>
+          <a href="#contact" class="header__content__items__item"><span>تواصل بنا</span></a>
         </div>
       </div>
     </div>
@@ -30,15 +30,15 @@
         <i v-if="mobileNav" @click="closeMobileNav()" class="fas fa-times"></i>
       </div>
       <div class="mobile-nav__items">
-        <router-link to="/" exact class="mobile-nav__items__item"><span>الرئيسية</span></router-link>
-        <router-link to="#" class="mobile-nav__items__item"><span>التسجيل</span></router-link>
-        <router-link to="#" class="mobile-nav__items__item"><span>معلومات عنا</span></router-link>
-        <router-link to="#" class="mobile-nav__items__item"><span>الخدمات</span></router-link>
-        <router-link to="#" class="mobile-nav__items__item"><span>تواصل بنا</span></router-link>
+        <a to="#slider" exact class="mobile-nav__items__item"><span>الرئيسية</span></a>
+        <a to="#register" class="mobile-nav__items__item"><span>التسجيل</span></a>
+        <a to="#about" class="mobile-nav__items__item"><span>معلومات عنا</span></a>
+        <a to="#services" class="mobile-nav__items__item"><span>الخدمات</span></a>
+        <a to="#contact" class="mobile-nav__items__item"><span>تواصل بنا</span></a>
       </div>
     </div>
 
-    <div class="slider">
+    <div id="slider" class="slider">
       <div v-if="slider_1" class="slider__item">
         <div class="slider__item__img">
           <img src="../assets/images/slider/slider-bg1.jpg">
@@ -106,9 +106,8 @@
       </div>
     </div>
 
-    <div class="space"></div>
-
     <div id="register" class="register row">
+      <div class="space"></div>
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="title-2 mb-2 color-primary">مرحبا بك في كيان</div>
@@ -141,9 +140,8 @@
       </div>
     </div>
 
-    <div class="space"></div>
-
     <div id="about" class="about">
+      <div class="space"></div>
       <div class="title-1 text-center mb-3 color-primary">معلومات عنا</div>
       <div class="desc about-desc text-center mb-5">
         النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
@@ -153,22 +151,30 @@
           <img src="../assets/images/about_us_2.jpg">
         </div>
         <div class="about__section__content">
-          <div class="title-3 mb-2">نقدم أفضل حلول أعمال التمويل العقاري</div>
+          <div class="title-4 mb-2">نقدم لك افضل واسرع الحلول التمويلية</div>
           <div class="break mb-4"></div>
           <div class="desc w-100 mb-3">
             النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
           </div>
-          <div class="desc w-100">
-            النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
+          <div class="title-5 me-3 mb-2">يمكنك التحدث الينا مباشره من خلال</div>
+          <div class="break me-3"></div>
+          <div class="about__section__content__contact me-3">
+            <div class="about__section__content__contact__btn">
+              <span>واتساب</span>
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="about__section__content__contact__btn">
+              <span>إتصال مباشر</span>
+              <i class="fas fa-phone-alt"></i>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <div class="space"></div>
-
     <div id="services" class="services">
+      <div class="space"></div>
       <div class="title-1 text-center mb-3 color-primary">تقدم مؤسسة كيان العديد من الخدمات</div>
       <div class="desc text-center w-75 mb-2">
         النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
@@ -219,7 +225,8 @@
 
     <div class="space"></div>
 
-    <div class="contact row">
+    <div id="contact" class="contact row">
+      <div class="space"></div>
       <div class="col-12 col-md-6 contact__info">
         <div class="title-2 mb-2">معلومات الاتصال</div>
         <div class="break mb-5"></div>
@@ -795,6 +802,33 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
       margin-right: -4rem;
       box-shadow: $shadow;
       z-index: 1;
+
+      &__contact {
+        margin-top: 1rem;
+        display: flex;
+
+        &__btn {
+          margin: 0 1rem;
+          padding: 1rem 1.2rem;
+          cursor: pointer;
+          box-shadow: 0 1rem 2rem rgba($color-primary, .4);
+          display: flex;
+          align-items: center;
+
+          & i {
+            margin-right: .8rem;
+            font-size: 1.5rem;
+          }
+
+          &:hover {
+            outline: none;
+            color: $color-white;
+            background-color: $color-primary;
+            transform: translateY(-3px);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .6);
+          }
+        }
+      }
     }
   }
 }

@@ -80,6 +80,11 @@ i {
   font-weight: 500;
 }
 
+.title-5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
 .desc {
   font-size: 1rem;
   margin: .5rem 1rem;
