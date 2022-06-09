@@ -443,6 +443,10 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
   display: none;
 }
 
+#register {
+  padding-top: 6rem;
+}
+
 ::selection {
   background-color: $color-primary;
   color: $color-white;
