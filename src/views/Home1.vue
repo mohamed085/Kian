@@ -1,6 +1,26 @@
 <template>
   <div class="ar">
 
+    <div v-if="whats_app_form" class="whats-app">
+      <b-form class="whats-app__form">
+        <div class="whats-app__form__title d-flex justify-content-between align-items-center">
+          <div class="title-3">تواصل معانا</div>
+          <div @click="closeWhatsAppForm" class="whats-app__form__title__close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="whats-app__form__content">
+          <div class="form-group">
+            <span>الإسم</span>
+            <b-form-input type="text" placeholder="الإسم"></b-form-input>
+          </div>
+          <div class="form-group">
+            <span>الجوال</span>
+            <b-form-input type="text" placeholder="الجوال"></b-form-input>
+          </div>
+          <a target="_blank" href="https://wa.me/+201012703497" class="btn register__form__btn">الإنتقال إلي واتساب</a>
+        </div>
+      </b-form>
+    </div>
+
     <div class="header"
          :class="{sticky: scrollPosition > 40}">
       <router-link to="/" class="header__logo">
@@ -43,12 +63,22 @@
         <div class="slider__item__img">
           <img src="../assets/images/slider/slider-bg1.jpg">
         </div>
-        <div class="slider__item__content">
-          <div class="slider__item__content__container">
-            <div class="title-1 mb-4 text-center animate__animated animate__fadeInDown">مؤسسة كيان</div>
-            <div class="title-3 mb-4 text-center animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
-            <div class="desc mb-4 text-center animate__animated animate__fadeInUp">
+        <div class="slider__item__content row">
+          <div class="slider__item__content__container col-12 col-md-6">
+            <div class="title-1 mb-2 animate__animated animate__fadeInDown">مؤسسة كيان</div>
+            <div class="title-3 mb-2 animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
+            <div class="desc mb-2 animate__animated animate__zoomIn">
               النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
+            </div>
+            <div class="about__section__content__contact animate__animated animate__fadeInUp">
+              <span @click="openWhatsAppForm" class="about__section__content__contact__btn">
+                <span>واتساب</span>
+                <i class="fab fa-whatsapp"></i>
+              </span>
+              <a target="_blank" href="tel:+201012703497"  class="about__section__content__contact__btn">
+                <span>إتصال مباشر</span>
+                <i class="fas fa-phone-alt"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -57,12 +87,22 @@
         <div class="slider__item__img">
           <img src="../assets/images/slider/slider-bg2.jpg">
         </div>
-        <div class="slider__item__content">
-          <div class="slider__item__content__container">
-            <div class="title-1 mb-4 text-center animate__animated animate__fadeInDown">مؤسسة كيان</div>
-            <div class="title-3 mb-4 text-center animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
-            <div class="desc mb-4 text-center animate__animated animate__fadeInUp">
+        <div class="slider__item__content row">
+          <div class="slider__item__content__container col-12 col-md-6">
+            <div class="title-1 mb-2 animate__animated animate__fadeInDown">مؤسسة كيان</div>
+            <div class="title-3 mb-2 animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
+            <div class="desc mb-2 animate__animated animate__zoomIn">
               النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
+            </div>
+            <div class="about__section__content__contact animate__animated animate__fadeInUp">
+              <span @click="openWhatsAppForm" class="about__section__content__contact__btn">
+                <span>واتساب</span>
+                <i class="fab fa-whatsapp"></i>
+              </span>
+              <a target="_blank" href="tel:+201012703497"  class="about__section__content__contact__btn">
+                <span>إتصال مباشر</span>
+                <i class="fas fa-phone-alt"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -71,15 +111,42 @@
         <div class="slider__item__img">
           <img src="../assets/images/slider/slider-bg3.jpg">
         </div>
-        <div class="slider__item__content">
-          <div class="slider__item__content__container">
-            <div class="title-1 mb-4 text-center animate__animated animate__fadeInDown">مؤسسة كيان</div>
-            <div class="title-3 mb-4 text-center animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
-            <div class="desc mb-4 text-center animate__animated animate__fadeInUp">
+        <div class="slider__item__content row">
+          <div class="slider__item__content__container col-12 col-md-6">
+            <div class="title-1 mb-2 animate__animated animate__fadeInDown">مؤسسة كيان</div>
+            <div class="title-3 mb-2 animate__animated animate__zoomIn">انطلق بنشاطك التجاري بعلامة جديدة</div>
+            <div class="desc mb-2 animate__animated animate__zoomIn">
               النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
+            </div>
+            <div class="about__section__content__contact animate__animated animate__fadeInUp">
+              <span @click="openWhatsAppForm" class="about__section__content__contact__btn">
+                <span>واتساب</span>
+                <i class="fab fa-whatsapp"></i>
+              </span>
+              <a target="_blank" href="tel:+201012703497"  class="about__section__content__contact__btn">
+                <span>إتصال مباشر</span>
+                <i class="fas fa-phone-alt"></i>
+              </a>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="register__container no-mobile">
+        <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
+        <div class="break mb-3"></div>
+        <div class="title-4">سجل الان وسيتواصل معك مستشار عقاري متخصص لتقديم حلول لك</div>
+        <b-form class="register__form">
+          <div class="form-group">
+            <span>الإسم</span>
+            <b-form-input type="text" placeholder="الإسم"></b-form-input>
+          </div>
+          <div class="form-group">
+            <span>الجوال</span>
+            <b-form-input type="text" placeholder="الجوال"></b-form-input>
+          </div>
+          <b-button class="register__form__btn">تسجيل الان</b-button>
+        </b-form>
       </div>
 
       <div class="slider__previous">
@@ -106,38 +173,22 @@
       </div>
     </div>
 
-    <div id="register" class="register row">
+    <div id="register" class="register__container no-lg">
+      <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
+      <div class="break mb-3"></div>
+      <div class="title-4">سجل الان وسيتواصل معك مستشار عقاري متخصص لتقديم حلول لك</div>
+      <b-form class="register__form">
+        <div class="form-group">
+          <span>الإسم</span>
+          <b-form-input type="text" placeholder="الإسم"></b-form-input>
+        </div>
+        <div class="form-group">
+          <span>الجوال</span>
+          <b-form-input type="text" placeholder="الجوال"></b-form-input>
+        </div>
+        <b-button class="register__form__btn">تسجيل الان</b-button>
+      </b-form>
       <div class="space"></div>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="title-2 mb-2 color-primary">مرحبا بك في كيان</div>
-          <div class="title-4 mb-3 me-2 ms-2">في كيان نقدم لك افضل واسرع الحلول التويلية</div>
-          <div class="desc w-100 mb-4">
-            النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
-          </div>
-          <div class="desc w-100">
-            النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
-          </div>
-        </div>
-        <div class="col-12 col-md-6 ">
-          <div class="register__container">
-            <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
-            <div class="break mb-4"></div>
-            <div class="title-4">سجل الان وسيتواصل معك مستشار عقاري متخصص لتقديم حلول لك</div>
-            <b-form class="register__form">
-              <div class="form-group">
-                <span>الإسم</span>
-                <b-form-input type="text" placeholder="الإسم"></b-form-input>
-              </div>
-              <div class="form-group">
-                <span>الجوال</span>
-                <b-form-input type="text" placeholder="الجوال"></b-form-input>
-              </div>
-              <b-button class="register__form__btn">تسجيل الان</b-button>
-            </b-form>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div id="about" class="about">
@@ -159,10 +210,10 @@
           <div class="title-5 me-3 mb-2">يمكنك التحدث الينا مباشره من خلال</div>
           <div class="break me-3"></div>
           <div class="about__section__content__contact me-3">
-            <a href="https://wa.me/+201012703497" class="about__section__content__contact__btn">
-              <span>واتساب</span>
-              <i class="fab fa-whatsapp"></i>
-            </a>
+              <span @click="openWhatsAppForm" class="about__section__content__contact__btn">
+                <span>واتساب</span>
+                <i class="fab fa-whatsapp"></i>
+              </span>
             <a href="tel:+201012703497"  class="about__section__content__contact__btn">
               <span>إتصال مباشر</span>
               <i class="fas fa-phone-alt"></i>
@@ -170,7 +221,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div id="services" class="services">
@@ -180,7 +230,7 @@
         النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
       </div>
       <div class="services__items row">
-        <div class="services__items__item col-6 col-md-3">
+        <div class="services__items__item col-12 col-md-3">
           <div class="services__items__item__icon"><i class="fas fa-university"></i></div>
           <div class="services__items__item__connector"><span></span></div>
           <div class="services__items__item__card">
@@ -190,7 +240,7 @@
             </div>
           </div>
         </div>
-        <div class="services__items__item col-6 col-md-3">
+        <div class="services__items__item col-12 col-md-3">
           <div class="services__items__item__icon"><i class="fas fa-university"></i></div>
           <div class="services__items__item__connector"><span></span></div>
           <div class="services__items__item__card">
@@ -200,7 +250,7 @@
             </div>
           </div>
         </div>
-        <div class="services__items__item col-6 col-md-3">
+        <div class="services__items__item col-12 col-md-3">
           <div class="services__items__item__icon"><i class="fas fa-university"></i></div>
           <div class="services__items__item__connector"><span></span></div>
           <div class="services__items__item__card">
@@ -210,7 +260,7 @@
             </div>
           </div>
         </div>
-        <div class="services__items__item col-6 col-md-3">
+        <div class="services__items__item col-12 col-md-3">
           <div class="services__items__item__icon"><i class="fas fa-university"></i></div>
           <div class="services__items__item__connector"><span></span></div>
           <div class="services__items__item__card">
@@ -296,6 +346,8 @@ export default {
       slider_1: true,
       slider_2: false,
       slider_3: false,
+      whats_app_form: false,
+      call_form: false,
     }
   },
   mounted() {
@@ -366,6 +418,12 @@ export default {
 
       }
     },
+    openWhatsAppForm() {
+      this.whats_app_form = true;
+    },
+    closeWhatsAppForm() {
+      this.whats_app_form = false;
+    },
   }
 }
 </script>
@@ -383,6 +441,10 @@ $color-black: #000;
 $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
 
 @import "../assets/css/form";
+
+.no-lg {
+  display: none;
+}
 
 ::selection {
   background-color: $color-primary;
@@ -509,6 +571,10 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
   min-height: 100vh;
   padding: 1rem;
 
+  & .header__logo {
+    color: $color-primary !important;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -576,7 +642,6 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
     height: 100%;
     overflow: hidden;
     background-image: linear-gradient(45deg, $color-black 4%, $color-black 100%), linear-gradient(-45deg, $color-black 0%, $color-black 80%);
-    z-index: -1;
 
     &__img img {
       width: 100%;
@@ -585,23 +650,27 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
       vertical-align: middle;
       border-style: none;
       opacity: .6;
+      z-index: -1;
     }
 
     &__content {
       position: absolute;
-      width: 100%;
+      width: 90%;
       height: 100vh;
       top: 0;
-      left: 0;
+      left: 5%;
+      right: 5%;
       display: flex;
-      justify-content: center;
       align-items: center;
       color: $color-white;
+      z-index: 10;
+      padding-top: 2rem;
 
       &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      }
+
+      & .desc {
+        width: 100%;
       }
     }
 
@@ -672,6 +741,7 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
     padding: 1rem 1.2rem;
     cursor: pointer;
     box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    z-index: 20;
 
     & i {
       font-size: 1rem;
@@ -701,9 +771,24 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
       transition: all .4s;
     }
   }
+
+  & .register__container {
+    z-index: 10;
+    position: absolute;
+    top: 13%;
+    bottom: 8%;
+    right: 55%;
+    left: 5%;
+  }
+}
+
+.slider__item__content .register__container {
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
 .register {
+  position: relative;
 
   & .col-12,
   & .col-md-6, {
@@ -711,16 +796,15 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
   }
 
   &__container {
-    margin: -10rem 1rem 1rem;
     background-color: $color-primary-dark;
-    padding: 2rem 5%;
-    z-index: 10;
+    padding: 2rem 3rem;
     color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color-primary-dark, .8);
   }
 
   &__form {
     margin: .8rem .4rem 1rem;
+    z-index: 100;
 
     &__btn {
 
@@ -845,6 +929,7 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
     padding: 4rem 5% 2rem;
 
     &__item {
+      margin-bottom: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -970,7 +1055,53 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
   }
 }
 
+.whats-app {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    padding: 1rem 0;
+    height: max-content;
+    margin-top: 3rem;
+    color: $color-white;
+    background-color: $color-primary-dark;
+    box-shadow: 0 1rem 2rem rgba($color-primary-dark, .8);
+    border-radius: 1rem;
+    width: 40rem;
+
+    &__title {
+      padding: .8rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+
+      & i {
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    }
+
+    &__content {
+      padding: 1rem 1.5rem;
+    }
+  }
+}
+
 @include respond(tab-port) {
+  .no-mobile {
+    display: none;
+  }
+
+  .no-lg {
+    display: block;
+  }
+
   .lg-nav {
     display: none;
   }
@@ -988,12 +1119,16 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
     padding: 0 3%;
   }
 
-  .mobile-nav {
-    display: block;
+  .slider__item__content__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  .register__container {
-    margin: 2rem 0 0;
+  .mobile-nav {
+    display: block;
   }
 
   .about__section {
