@@ -204,17 +204,8 @@
           <div class="desc w-100 mb-3">
             النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
           </div>
-          <div class="title-5 me-3 mb-2">يمكنك التحدث الينا مباشره من خلال</div>
-          <div class="break me-3"></div>
-          <div class="about__section__content__contact me-3">
-              <span @click="openWhatsAppForm" class="about__section__content__contact__btn">
-                <span>واتساب</span>
-                <i class="fab fa-whatsapp"></i>
-              </span>
-            <a href="tel:+201012703497"  class="about__section__content__contact__btn">
-              <span>إتصال مباشر</span>
-              <i class="fas fa-phone-alt"></i>
-            </a>
+          <div class="desc w-100 mb-3">
+            النص ما ازداد وضوحا على الظاهر لمعنى المتكلم، وهو سوق الكلام لأجل ذلك المعنى، فإذا قيل أحسنوا إلى فلان الذي يفرح بفرحي ويغتم بغمي، كان نصا في بيان محبته.
           </div>
         </div>
       </div>
