@@ -784,6 +784,10 @@ $shadow: 0 0 1.1rem rgba(0,0,0,0.3);
   border-radius: 1rem;
 }
 
+#register {
+  padding-top: 6rem;
+}
+
 .register {
   position: relative;
 
