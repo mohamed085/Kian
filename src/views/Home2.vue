@@ -55,6 +55,24 @@
       </div>
     </div>
 
+    <div id="register" class="register__container no-lg">
+      <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
+      <div class="break mb-3"></div>
+      <div class="title-4">سجل الان وسيتواصل معك مستشار عقاري متخصص لتقديم حلول لك</div>
+      <b-form class="register__form">
+        <div class="form-group">
+          <span>الإسم</span>
+          <b-form-input type="text" placeholder="الإسم"></b-form-input>
+        </div>
+        <div class="form-group">
+          <span>الجوال</span>
+          <b-form-input type="text" placeholder="الجوال"></b-form-input>
+        </div>
+        <b-button class="register__form__btn">تسجيل الان</b-button>
+      </b-form>
+      <div class="space"></div>
+    </div>
+
     <div id="slider" class="slider">
       <div v-if="slider_1" class="slider__item">
         <div class="slider__item__img">
@@ -168,24 +186,6 @@
                @click="displaySlider('slider_3')"></div>
         </div>
       </div>
-    </div>
-
-    <div id="register" class="register__container no-lg">
-      <div class="title-2 mb-2">إستشارتك مجانية الإن مع كيان</div>
-      <div class="break mb-3"></div>
-      <div class="title-4">سجل الان وسيتواصل معك مستشار عقاري متخصص لتقديم حلول لك</div>
-      <b-form class="register__form">
-        <div class="form-group">
-          <span>الإسم</span>
-          <b-form-input type="text" placeholder="الإسم"></b-form-input>
-        </div>
-        <div class="form-group">
-          <span>الجوال</span>
-          <b-form-input type="text" placeholder="الجوال"></b-form-input>
-        </div>
-        <b-button class="register__form__btn">تسجيل الان</b-button>
-      </b-form>
-      <div class="space"></div>
     </div>
 
     <div id="about" class="about">
@@ -335,7 +335,7 @@
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Home1",
+  name: "Home2",
   data() {
     return {
       scrollPosition: null,
